@@ -11,6 +11,9 @@ app = Flask(__name__)
 # Render HTML with count variable
 
 # route your webpage
+@app.route('/')
+def home():
+    return render_template("index.html")
 
 
 @app.route('/', methods=['POST'])
